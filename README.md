@@ -43,3 +43,4 @@ The important thing here is to run this in a docker. So thats why there is a Doc
 ```docker run -p <port>:3000 -d juanmv7/authweb_api```   
 
 _where the port, you can choose it_
+**VERY IMPORTANT: The port that you are using, you need to change it in _config.js_ in the "origin" section (default is 1234)**

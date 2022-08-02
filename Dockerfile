@@ -1,7 +1,8 @@
 FROM node:16-alpine
-COPY . /usr/src/app
+
 WORKDIR /usr/src/app
+COPY package*.json ./
 RUN npm install --no-cache
+COPY . .
 EXPOSE 3000
-RUN chmod +x /usr/src/app/docker-entrypoint.sh
-ENTRYPOINT ["/usr/src/app/docker-entrypoint.sh", "npm", "start"]
+CMD [ "node", "app.js" ]

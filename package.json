@@ -1,5 +1,5 @@
 {
-  "name": "webauthn-skeleton",
+  "name": "docker_web",
   "version": "0.9.9",
   "description": "Skeleton for a Node.js powered Web Authentication API enabled website",
   "main": "app.js",
@@ -22,7 +22,7 @@
     "koa",
     "koajs"
   ],
-  "author": "Hexagon <hexagon@56k.guru>",
+  "author": "Juan <juanmuvii@gmail.com>",
   "contributors": [
     "Pinta365@GitHub"
   ],
@@ -42,6 +42,7 @@
     "node-json-db": "^1.5.0"
   },
   "devDependencies": {
-    "eslint": "^8.18.0"
+    "eslint": "^8.18.0",
+    "nodemon": "^2.0.19"
   }
 }

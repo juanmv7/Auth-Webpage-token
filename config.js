@@ -1,7 +1,7 @@
 // Base configuration
 let config = {
 	"port": 3000,
-	"origin": "https://localhost:3000",
+	"origin": "https://localhost:1234",
 	"rpId": "localhost",
 	"rpName": "Webauthn Skeleton",
 	"mode": "development",

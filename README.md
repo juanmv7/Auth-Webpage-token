@@ -38,5 +38,8 @@ cd ..
 
 The important thing here is to run this in a docker. So thats why there is a DockerFile. You first need to build the docker. As an advice, I recommend you to use DockerDesktop.
 
-docker build . -t <DockerHub_ID>/authweb_api
-docker run -p <port>:3000 -d juanmv7/authweb_api      _where the port, you can choose it_
+```docker build . -t <DockerHub_ID>/authweb_api´´´
+
+```docker run -p <port>:3000 -d juanmv7/authweb_api´´´   
+
+_where the port, you can choose it_

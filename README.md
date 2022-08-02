@@ -1,27 +1,5 @@
-# webauthn-skeleton
-
-This is a working skeleton of a Node.js/Koa application with passwordless login (Web Authentication API, WebAuthN, FIDO2).
-
-Main version (Koa/fido2-lib) live at [https://56k.guru/webauthn](https://56k.guru/webauthn)
-Deno version (Deno/Opine/fido2-lib) live at [https://56k.guru/webauthn-deno](https://56k.guru/webauthn-deno)
-
-## Features
-
-*  Tested with Windows Hello, Yubikey or Android lockscreen, more to come.
-*  Supports adding more than one authentication method to the same account.
-*  Supports transfering account to another device by a time limited one time link or QR-code.
-
-Using Koa and fido2-lib
-
-## Versions
-
-There are multiple versions of this demo available in different branches
-
-| Runtime | Server framework | Branch | Webauthn-lib | Live at |
-| ------- | ---------------- | ------ | ------------ | ------- |
-| Node | Koa | [main](https://github.com/Hexagon/webauthn-skeleton) | [fido2-lib](https://www.npmjs.com/package/fido2-lib) | [56k.guru/webauthn](https://56k.guru/webauthn) |
-| Node | Express | [server/express](https://github.com/Hexagon/webauthn-skeleton/tree/server/express) | [fido2-lib](https://www.npmjs.com/package/fido2-lib) | - |
-| Deno | Opine | [server/deno](https://github.com/Hexagon/webauthn-skeleton/tree/server/deno) | [fido2-lib](https://www.npmjs.com/package/fido2-lib) | [56k.guru/webauthn-deno](https://56k.guru/webauthn-deno) |
+# Authwebpage
+This is a demo of a webpage that allows authentication without the use of a password, intead we use a token with public key cryptography.
 
 ## Getting it running
 
@@ -58,18 +36,7 @@ cd ..
 
 ## Docker development build
 
-```docker build . --tag="hexagon/webauthn-skeleton"```
+The important thing here is to run this in a docker. So thats why there is a DockerFile. You first need to build the docker. As an advice, I recommend you to use DockerDesktop.
 
-```
-sudo docker run \
-  -d \
-  --restart=always \
-  -e WAS_ORIGIN="https://localhost:3000" \
-  -e WAS_RPID="localhost" \
-  -e WAS_BASE_URL="https://localhost:3000/" \
-  -e WAS_BASE_URL="https://localhost:3000/orlikethisifservedfromasuburl" \
-  -e WAS_RPNAME="WebAuthN Demo" \
-  -e WAS_MODE="development" \
-  -e WAS_PORT=3000 \
-  --name webauthndemo \
-  hexagon/webauthn-skeleton```
+docker build . -t <DockerHub_ID>/authweb_api
+docker run -p <port>:3000 -d juanmv7/authweb_api      _where the port, you can choose it_

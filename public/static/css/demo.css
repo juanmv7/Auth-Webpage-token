@@ -9,14 +9,25 @@
     left: 0px;
     z-index: -1;
 }
+
 #content {
     background: rgba(0,0,0,128);
 }
+
+#imagen_infineon{
+    display: block;
+    margin-top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 .left-column {
     width: 60%;
+    padding-top: 30px;
 }
 .right-column {
     width: 34%;
+    padding-top: 30px;
 }
 .fl {
     float: left;
@@ -28,7 +39,7 @@
     padding-right:40px;
 }
 .full {
-    width: 87%;
+    width: 89%;
 }
 .half {
     width: 46%;
